@@ -43,9 +43,14 @@ const AverageHomePrice = ({ communityId }: Props) => {
 		if (sum === 0) {
 			return 'Not Available';
 		} else {
-			const average = '$' + Number(sum / homes.length).toFixed(2);
+			const average = Number(sum / homes.length);
 
-			return average;
+			const formattedAverage = new Intl.NumberFormat('en-US', {
+				style: 'currency',
+				currency: 'CAD',
+			}).format(average);
+
+			return formattedAverage;
 		}
 	}
 
@@ -55,7 +60,12 @@ const AverageHomePrice = ({ communityId }: Props) => {
 			setAverageHomePrice(getAverageHomePrice(communityHomes));
 		});
 	}, []);
-	return <p className='community__avg-price'>Avg: {averageHomePrice}</p>;
+	return (
+		<>
+			<p className='community__avg'>Average Home Price</p>
+			<p className='community__price'>{averageHomePrice}</p>
+		</>
+	);
 };
 
 export default AverageHomePrice;
