@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 const homesUrl =
 	'https://storage.googleapis.com/openhouse-ai-fe-coding-test/homes.json';
-let averageHomePrice: number = 0;
 
 interface Props {
 	communityId: string;
