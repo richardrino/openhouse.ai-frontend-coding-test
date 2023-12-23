@@ -1,3 +1,4 @@
+import AverageHomePrice from './AverageHomePrice';
 import { useState, useEffect } from 'react';
 
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -48,6 +49,7 @@ const Community = () => {
 							<div className='community__card' key={community.id}>
 								<p className='community__name'>{community.name}</p>
 								<img className='community__img' src={community.imgUrl} alt='' />
+								<AverageHomePrice communityId={community.id} />
 							</div>
 						);
 					})}
