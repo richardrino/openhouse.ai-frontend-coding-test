@@ -34,23 +34,25 @@ const Community = () => {
 	useEffect(() => {
 		getCommunitiesData().then((data) => {
 			const sortedCommunities = sortCommunities(data);
-            setCommunities(sortedCommunities);
+			setCommunities(sortedCommunities);
 		});
 	}, []);
 
 	return (
-		<>
-			<h1>Communities</h1>
-			{communities &&
-				communities.map((community) => {
-					return (
-						<div key={community.id}>
-							<p>{community.name}</p>
-							<img src={community.imgUrl} alt='' />
-						</div>
-					);
-				})}
-		</>
+		<div className='community__container--outer'>
+			<h1 className='title'>Communities</h1>
+			<div className='community__container--inner'>
+				{communities &&
+					communities.map((community) => {
+						return (
+							<div className='community__card' key={community.id}>
+								<p className='community__name'>{community.name}</p>
+								<img className='community__img' src={community.imgUrl} alt='' />
+							</div>
+						);
+					})}
+			</div>
+		</div>
 	);
 };
 
