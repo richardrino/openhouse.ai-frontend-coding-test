@@ -4,7 +4,7 @@ This project was done as part of the OpenHouse.AI Front End Coding Test. The dep
 
 Overall, this test has been a great opportunity for me to learn and to work with APIs and data in a way that is similar to the type of work one could see on the job.
 
-A big barrier for me at the start of this test was getting around the CORS error in the browser. I'm glad that I was able to educate myself more on it and its role in the browser and find a solution. I used the reverse proxy, CORS Anywhere in order to get the necessary headers.
+A big barrier for me at the start of this test was getting around the CORS error in the browser. I'm glad that I was able to educate myself more on it and its role in the browser and find a solution. I used the reverse proxy, CORS Anywhere in order to get the necessary headers. In order to unlock access to CORS Anywhere for development, go [here](https://cors-anywhere.herokuapp.com/).
 
 One of the more challenging aspsects of this test for me was learning TypeScript while attempting the test.I would like to go over the project again after reviewing TypeScript best practices as I was new to the syntax and I don't feel like I utilized TypeScript to the fullest.
 
